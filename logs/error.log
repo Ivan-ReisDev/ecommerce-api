@@ -1,0 +1,26 @@
+2024-07-08 10:54:02:542 - [31merror[39m : [31mErro ao conectar ao banco de dados.[39m 
+2024-07-08 10:54:02:542 - [31merror[39m : [31mbad auth : authentication failed[39m 
+2024-07-10 12:00:46:046 - [31merror[39m : [31mSystem validation failed: about: Path `about` is required., linkedin: Path `linkedin` is required., whatsapp: Path `whatsapp` is required., github: Path `github` is required.[39m 
+2024-07-10 12:24:40:2440 - [31merror[39m : [31mCast to ObjectId failed for value "668ea37cdf26d9d9e8dad5a" (type string) at path "_id" for model "System"[39m 
+2024-07-10 12:26:35:2635 - [31merror[39m : [31mCast to ObjectId failed for value "668ea37cdf26d9d9e83da5a" (type string) at path "_id" for model "System"[39m 
+2024-07-10 12:27:46:2746 - [31merror[39m : [31mCast to ObjectId failed for value "668ea37cdf26d9d9e83da5a" (type string) at path "_id" for model "System"[39m 
+2024-07-10 12:27:48:2748 - [31merror[39m : [31mCast to ObjectId failed for value "668ea37cdf26d9d9e83da5a" (type string) at path "_id" for model "System"[39m 
+2024-07-10 12:27:49:2749 - [31merror[39m : [31mCast to ObjectId failed for value "668ea37cdf26d9d9e83da5a" (type string) at path "_id" for model "System"[39m 
+2024-07-10 12:27:49:2749 - [31merror[39m : [31mCast to ObjectId failed for value "668ea37cdf26d9d9e83da5a" (type string) at path "_id" for model "System"[39m 
+2024-07-10 13:51:35:5135 - [31merror[39m : [31mCast to ObjectId failed for value "668ea37cdf26d9d9e83da5a" (type string) at path "_id" for model "System"[39m 
+2024-07-10 14:20:33:2033 - [31merror[39m : [31mCast to ObjectId failed for value "55" (type string) at path "_id" for model "System"[39m 
+2024-07-10 14:21:10:2110 - [31merror[39m : [31mCast to ObjectId failed for value "55" (type string) at path "_id" for model "System"[39m 
+2024-07-10 14:22:39:2239 - [31merror[39m : [31mCast to ObjectId failed for value "aaaaa" (type string) at path "_id" for model "System"[39m 
+2024-07-10 14:22:57:2257 - [31merror[39m : [31mCast to ObjectId failed for value "aaaa" (type string) at path "_id" for model "System"[39m 
+2024-07-10 20:09:06:96 - [31merror[39m : [31mInvalid status code: 2[39m 
+2024-07-10 20:35:06:356 - [31merror[39m : [31mConverting circular structure to JSON[39m
+[31m    --> starting at object with constructor 'MongoClient'[39m
+[31m    |     property 's' -> object with constructor 'Object'[39m
+[31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
+[31m    --- property 'client' closes the circle[39m 
+2024-07-10 20:35:53:3553 - [31merror[39m : [31mConverting circular structure to JSON[39m
+[31m    --> starting at object with constructor 'MongoClient'[39m
+[31m    |     property 's' -> object with constructor 'Object'[39m
+[31m    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'[39m
+[31m    --- property 'client' closes the circle[39m 
+2024-07-12 12:28:03:283 - [31merror[39m : [31mpriceUtils_1.Price.formatPrice is not a function[39m 
