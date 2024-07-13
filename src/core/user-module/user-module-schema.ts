@@ -1,52 +1,44 @@
 import { model, Schema } from "mongoose";
-interface User{
-    firstName:string;
-    surname:string;
-    email: string;
-    password:string;
-    role:string;
-    status: string;
+import { IUser } from "./user-module-interface";
 
-}
-
-const userSchema = new Schema<User>(
+const userSchema = new Schema<IUser>(
     {
-        firstName:{ 
+        firstName: {
             type: String,
             required: true
         },
 
-        surname:{ 
+        surname: {
             type: String,
-            required: true    
+            required: true
         },
 
-        email:{ 
+        email: {
             type: String,
-            required: true    
+            required: true
         },
 
-        password:{ 
+        password: {
             type: String,
-            required: true    
+            required: true
         },
 
-        role:{
+        role: {
             type: String,
             enum: ["User", "Moderador", "Admin"],
             required: true
         },
 
-        status:{
+        status: {
             type: String,
             enum: ["Ativo", "Desativado", "Pendente", "Banido"],
             required: true
 
         }
     },
-{
-    timestamps: true
+    {
+        timestamps: true
 
-});
+    });
 
-export const UserModel = model<User>("User", userSchema);
+export const UserModel = model<IUser>("User", userSchema);

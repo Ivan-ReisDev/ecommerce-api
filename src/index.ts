@@ -13,7 +13,7 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "uploads")))
 
 
-app.use("/api/", router)
+app.use("/api", router)
 app.listen(port, async () => {
   await connect();
   Logger.info(`Aplicação rodando no endereço http://localhost:${port}`);
