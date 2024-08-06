@@ -1,7 +1,9 @@
 import { model, Schema } from "mongoose";
 import { Product } from "./products-module-interface";
 
-const productSchema = new Schema<Product>(
+type ProductSchema = Product<number>
+
+const productSchema = new Schema<ProductSchema> (
     {
         name: { 
             type: String,
@@ -31,4 +33,4 @@ const productSchema = new Schema<Product>(
     }
 );
 
-export const ProductModel = model<Product>("Product", productSchema);
+export const ProductModel = model<ProductSchema>("Product", productSchema);

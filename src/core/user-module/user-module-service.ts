@@ -1,7 +1,8 @@
 import { IUser } from "./user-module-interface";
 import { UserModel } from "./user-module-schema";
+import { hash } from "bcryptjs";
 
-class CustomError extends Error {
+export class CustomError extends Error {
     status: number;
     constructor(status: number, message: string) {
         super(message);
@@ -24,11 +25,13 @@ export default class UserModuleService {
             throw new CustomError(400, 'E-mail já cadastrado.');
         }
 
+        const hashPassword = await hash(password.trim(), 12);
+
         const newUser: IUser = {
             firstName: firstName.trim(),
             surname: surname.trim(),
             email: email.toLowerCase().trim(),
-            password: password.trim(),
+            password: hashPassword,
             role: 'User',
             status: 'Pendente'
         };
@@ -53,5 +56,20 @@ export default class UserModuleService {
             .select("-password");
 
         return { users, totalPages };
+    }
+
+    async currentUser(id: string) {
+        const user: object | null = await UserModel.findById(id).select("-password");
+        if(!user){
+            throw new CustomError(401, 'Usuário não existe');
+        }
+
+        try {
+            return user;
+        } catch (error) {
+            throw new CustomError(500, 'Erro ao retornar usuário.');
+        }
+
+
     }
 }
